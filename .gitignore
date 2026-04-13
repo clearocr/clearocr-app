@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+dist/
+build/
+*.egg-info/
+.coverage
+.pytest_cache/
+.settings/
+.DS_Store
+.idea/
+.vscode/
+.clearocr_client_app_qt/
