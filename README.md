@@ -1,3 +1,4 @@
+<img width="1918" height="1028" alt="clearOCR-app" src="https://github.com/user-attachments/assets/78f5e2bc-4d69-4f0a-8687-1d73a9b7cf66" />
 # clearOCR Client
 
 Desktop client for running OCR on PDF and image files using the **clearOCR API**.
