@@ -1,60 +1,146 @@
-# clearOCR Client
+# 🚀 clearOCR Client
 
-Desktop client for running OCR on PDF and image files using the **clearOCR API**.
+Extract clean, well-ordered text from PDFs and images using the **clearOCR API**.
 
-## Features
+Desktop application with batch processing, PDF chunking and optional barcode detection.
 
-- API key authentication
-- batch OCR for files and folders
-- barcode search (optional)
-- optional page markers in TXT output
-- automatic desktop language detection:
-  - **Polish UI** if the system language starts with `pl`
-  - **English UI** for all other system languages
-- PDF chunking with **pypdf** (no system `qpdf` required)
-- PyPI-ready package structure
+---
 
-## Installation from source
+## ✨ Features
 
-```bash
-python -m venv venv
-source venv/bin/activate
-pip install -U pip
-pip install .
-```
+* 🔑 API key authentication
+* 📂 Batch OCR for files and folders
+* 📄 PDF support with automatic chunking (**pypdf**, no system dependencies)
+* 🔍 Optional barcode detection
+* 🧾 Clean text output with proper reading order
+* 📑 Optional page markers in TXT output (`--- PAGE N ---`)
+* 🌍 Automatic UI language detection:
 
-## Run
+  * Polish 🇵🇱 if system language starts with `pl`
+  * English 🇬🇧 otherwise
+* ⚙️ Local settings (stored on user's machine)
+
+---
+
+## 🎁 Free Tier
+
+New users receive:
+
+* **1,000 free OCR runs**
+* valid for **30 days**
+
+👉 To get started:
+
+* create an account at **https://clearocr.com**
+* generate your **API key**
+* use it in the application
+
+---
+
+## 📸 Screenshot
+
+![clearOCR screenshot](assets/clearocr-app-screenshot.png)
+
+---
+
+## ⚡ Quick Start
+
+1. Run the application:
 
 ```bash
 clearocr-app
 ```
 
-or
+2. Enter your API key
+3. Click **Run OCR**
 
-```bash
-clearocr
+---
+
+## ⚙️ API Configuration
+
+The client is preconfigured to work with the clearOCR API:
+
+```
+https://clearocr.teamquest.pl:60213/extract-document-parser
 ```
 
-## API configuration
+You only need to provide:
 
-The application uses:
+* **API KEY**
 
-- **API URL**
-- **API KEY**
+No username or additional setup required.
 
-No API username is required.
+---
 
-## Build and publish to PyPI
+## 📄 Output
+
+* Output is saved as `.txt`
+* Optional page separators:
+
+```
+--- PAGE 1 ---
+```
+
+* Barcode results (if enabled) are appended at the end:
+
+```
+--- BARCODES ---
+```
+
+---
+
+## 🧠 How it works
+
+* Files are sent to the clearOCR API
+* Large PDFs are automatically split into chunks
+* Results are merged into a single clean text output
+* Temporary files are removed after processing
+
+---
+
+## 📊 OCR Benchmarks (Polish documents)
+
+Performance benchmarks on real-world Polish documents are available here:
+
+👉 https://huggingface.co/collections/Lukaszl/polish-ocr-benchmarks-results
+
+These benchmarks focus on:
+
+* government documents
+* insurance/legal texts
+* newspapers
+* complex layouts
+
+---
+
+## ⚠️ Disclaimer
+
+This application is provided **"AS IS"**, without any guarantees or support.
+
+* No technical support is provided for this client
+* Use at your own risk
+* For production use, rely on the **clearOCR API directly**
+
+---
+
+## ⚠️ Requirements
+
+* Python **3.10+**
+* No external system dependencies (uses `pypdf`)
+
+---
+
+## 🛠 Development
+
+Build package:
 
 ```bash
-pip install build twine
+pip install build
 python -m build
-python -m twine check dist/*
-twine upload dist/*
 ```
 
-## Notes
+---
 
-- TXT output can include page separators like `--- PAGE 1 ---` when enabled in settings.
-- Barcode results are appended to TXT output only when barcode scanning is enabled in the UI.
-- Temporary PDF chunk files are removed automatically after processing.
+## 📜 License
+
+Apache License 2.0
