@@ -29,7 +29,7 @@ New users receive:
 * **1,000 free OCR runs**
 * valid for **30 days**
 
-👉 To get started:
+To get started:
 
 * create an account at **https://clearocr.com**
 * generate your **API key**
@@ -45,14 +45,74 @@ New users receive:
 
 ## ⚡ Quick Start
 
-1. Run the application:
+1. Start the application
+2. Enter your **API KEY**
+3. Run OCR on your files
+
+---
+
+## 📦 Installation
+
+### Option 1 — Install from GitHub Release
+
+Download the latest `.whl` file from the **Releases** section.
+
+#### Linux / macOS
+
+```bash
+python -m venv env
+source env/bin/activate
+pip install -U pip
+pip install clearocr_app-0.1.1-py3-none-any.whl
+```
+
+#### Windows (PowerShell)
+
+```powershell
+python -m venv env
+env\Scripts\activate
+pip install -U pip
+pip install clearocr_app-0.1.1-py3-none-any.whl
+```
+
+Run:
 
 ```bash
 clearocr-app
 ```
 
-2. Enter your API key
-3. Click **Run OCR**
+---
+
+### Option 2 — Install from source
+
+```bash
+git clone https://github.com/clearocr/clearocr-app.git
+cd clearocr-app
+```
+
+#### Linux / macOS
+
+```bash
+python -m venv env
+source env/bin/activate
+pip install -U pip
+pip install .
+```
+
+#### Windows (PowerShell)
+
+```powershell
+python -m venv env
+env\Scripts\activate
+pip install -U pip
+pip install .
+```
+
+Run:
+
+```bash
+clearocr-app
+```
 
 ---
 
@@ -60,7 +120,7 @@ clearocr-app
 
 The client is preconfigured to work with the clearOCR API:
 
-```
+```text
 https://clearocr.teamquest.pl:60213/extract-document-parser
 ```
 
@@ -77,13 +137,13 @@ No username or additional setup required.
 * Output is saved as `.txt`
 * Optional page separators:
 
-```
+```text
 --- PAGE 1 ---
 ```
 
-* Barcode results (if enabled) are appended at the end:
+* Barcode results (when enabled) are appended at the end:
 
-```
+```text
 --- BARCODES ---
 ```
 
@@ -100,16 +160,9 @@ No username or additional setup required.
 
 ## 📊 OCR Benchmarks (Polish documents)
 
-Performance benchmarks on real-world Polish documents are available here:
+Performance benchmarks on real-world Polish documents:
 
 👉 https://huggingface.co/collections/Lukaszl/polish-ocr-benchmarks-results
-
-These benchmarks focus on:
-
-* government documents
-* insurance/legal texts
-* newspapers
-* complex layouts
 
 ---
 
@@ -132,11 +185,15 @@ This application is provided **"AS IS"**, without any guarantees or support.
 
 ## 🛠 Development
 
-Build package:
-
 ```bash
 pip install build
 python -m build
+```
+
+Build output:
+
+```text
+dist/
 ```
 
 ---
