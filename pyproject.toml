@@ -15,7 +15,7 @@ authors = [
 dependencies = [
   "PySide6>=6.6.0",
   "requests>=2.31.0",
-  "pypdf>=5.0.0",
+  "pypdf[crypto]>=5.0.0",
 ]
 keywords = ["ocr", "desktop", "pdf", "pyside6", "clearocr"]
 classifiers = [

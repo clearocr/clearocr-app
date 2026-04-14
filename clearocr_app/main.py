@@ -130,6 +130,7 @@ class OCRWorker(QThread):
             self._t("api_missing"),
             "Empty OCR result",
             "Empty OCR result for PDF",
+            "cryptography>=3.1 is required for AES algorithm",
         ]
         return not any(marker in message for marker in non_retry_markers)
 
