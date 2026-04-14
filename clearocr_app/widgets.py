@@ -23,6 +23,8 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+DEFAULT_API_URL = "https://clearocr.teamquest.pl:60213/extract-document-parser"
+
 
 class DropZone(QFrame):
     files_and_dirs_dropped = Signal(list, list)  # files, dirs
@@ -135,7 +137,7 @@ class SettingsDialog(QDialog):
 
         initial_data = initial_data or {}
 
-        self.api_url_edit = QLineEdit(initial_data.get('api_url', ''))
+        self.api_url_edit = QLineEdit(initial_data.get('api_url', DEFAULT_API_URL))
         self.api_url_edit.setPlaceholderText('https://your-server/extract-document-parser')
 
         self.api_key_edit = QLineEdit(initial_data.get('api_key', ''))
