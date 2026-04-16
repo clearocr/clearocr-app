@@ -41,11 +41,11 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from .engine import OCRSettings, list_supported_files, process_file
-from .logo_asset import clearocr_logo_pixmap
-from .ui_theme import APP_STYLESHEET, set_language, status_background, status_color, status_label
-from .widgets import DropZone, SettingsDialog, StatCard
-from .i18n import I18N
+from clearocr_app.engine import OCRSettings, list_supported_files, process_file
+from clearocr_app.logo_asset import clearocr_logo_pixmap
+from clearocr_app.ui_theme import APP_STYLESHEET, set_language, status_background, status_color, status_label
+from clearocr_app.widgets import DropZone, SettingsDialog, StatCard
+from clearocr_app.i18n import I18N
 
 
 APP_DIR = Path.home() / ".clearocr_client_app_qt"
@@ -1243,15 +1243,15 @@ class MainWindow(QMainWindow):
         super().closeEvent(event)
 
 
-def main():
+def main() -> int:
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
     app.setApplicationName("clearOCR Client")
     app.setOrganizationName("clearOCR")
     window = MainWindow()
     window.show()
-    sys.exit(app.exec())
+    return app.exec()
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
