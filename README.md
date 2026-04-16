@@ -22,6 +22,32 @@ Desktop application with batch processing, PDF chunking and optional barcode det
 
 ---
 
+## 🚀 Desktop App (No Python setup required)
+
+You can now use clearOCR without installing Python.
+
+### Before you start
+
+To use the application, you need a clearOCR account and an API key:
+
+1. Create an account at **https://clearocr.com**
+2. Generate your **API key**
+3. Download the Windows app from the latest release:
+
+👉 https://github.com/clearocr/clearocr-app/releases/latest
+
+---
+
+### Quick start
+
+1. Run the application
+2. Enter your **API KEY**
+3. Drop files or folders into the app
+4. Start OCR
+5. Get extracted text
+
+---
+
 ## 🎁 Free Tier
 
 New users receive:
@@ -53,7 +79,7 @@ To get started:
 
 ## 📦 Installation
 
-### Option 1 — Install from GitHub Release
+### Option 1 — Install from GitHub Release (`.whl`)
 
 Download the latest `.whl` file from the **Releases** section.
 
@@ -63,7 +89,7 @@ Download the latest `.whl` file from the **Releases** section.
 python -m venv env
 source env/bin/activate
 pip install -U pip
-pip install clearocr_app-0.1.1-py3-none-any.whl
+pip install clearocr_app-0.1.3-py3-none-any.whl
 ```
 
 #### Windows (PowerShell)
@@ -72,7 +98,7 @@ pip install clearocr_app-0.1.1-py3-none-any.whl
 python -m venv env
 env\Scripts\activate
 pip install -U pip
-pip install clearocr_app-0.1.1-py3-none-any.whl
+pip install clearocr_app-0.1.3-py3-none-any.whl
 ```
 
 Run:
