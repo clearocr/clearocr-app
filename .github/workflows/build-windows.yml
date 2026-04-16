@@ -34,7 +34,7 @@ jobs:
             --name clearocr-app `
             --icon=clearocr_app/clearocr_app_favicon.ico `
             --add-data "clearocr_app/clearocr_app_logo.png;clearocr_app" `
-            clearocr_app/main.py
+            clearocr_app/__main__.py
 
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v4
